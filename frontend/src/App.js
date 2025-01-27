@@ -5,7 +5,7 @@ const form_fields = {
     firstName: '',
     lastName: '',
 }
-
+// compare test :
 
 function App() {
     const [formData, setFormData] = useState(form_fields)
@@ -13,7 +13,7 @@ function App() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:4000/api/user`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/user`, {
                 method: 'POST',
                 body: JSON.stringify(formData),
                 headers: {

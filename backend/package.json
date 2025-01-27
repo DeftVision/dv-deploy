@@ -9,11 +9,13 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
   "scripts": {
     "server": "nodemon server.js",
-    "start:production": "NODE_ENV=production node server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "start:production": "cross-env NODE_ENV=production node server.js"
   },
   "keywords": [],
   "author": "",
